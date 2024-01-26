@@ -7,6 +7,10 @@ if !exists('g:typst_cmd')
     let g:typst_cmd = "typst"
 endif
 
+if !exists('g:typst_no_editor')
+    let g:typst_no_editor = 0
+endif
+
 if !exists('g:typst_pdf_viewer')
     let g:typst_pdf_viewer =  ""
 endif

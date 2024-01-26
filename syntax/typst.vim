@@ -19,10 +19,10 @@ syntax cluster typstComment
     \ contains=typstCommentBlock,typstCommentLine
 syntax match typstCommentBlock
     \ #/\*\%(\_.\{-}\)\*/#
-    \ contains=typstCommentTodo,@Spell
+    \ contains=typstCommentTodo
 syntax match typstCommentLine
     \ #//.*#
-    \ contains=typstCommentTodo,@Spell
+    \ contains=typstCommentTodo
 syntax keyword typstCommentTodo
     \ contained
     \ TODO FIXME XXX TBD
@@ -356,77 +356,77 @@ if g:typst_conceal_math
 endif
 
 
-" Math > Linked groups {{{2
-highlight default link typstMathFunction            Statement
-highlight default link typstMathNumber              Number
-highlight default link typstMathSymbol              Statement
-
-" Highlighting {{{1
-
-" Highlighting > Linked groups {{{2
-highlight default link typstCommentBlock            Comment
-highlight default link typstCommentLine             Comment
-highlight default link typstCommentTodo             Todo
-highlight default link typstCodeConditional         Conditional
-highlight default link typstCodeRepeat              Repeat
-highlight default link typstCodeKeyword             Keyword
-highlight default link typstCodeConstant            Constant
-highlight default link typstCodeNumberInteger       Number
-highlight default link typstCodeNumberFloat         Number
-highlight default link typstCodeNumberLength        Number
-highlight default link typstCodeNumberAngle         Number
-highlight default link typstCodeNumberRatio         Number
-highlight default link typstCodeNumberFraction      Number
-highlight default link typstCodeString              String
-highlight default link typstCodeStatementWord       Statement
-highlight default link typstCodeIdentifier          Identifier
-highlight default link typstCodeFieldAccess         Identifier
-highlight default link typstCodeFunction            Function
-highlight default link typstCodeParen               Noise
-highlight default link typstCodeBrace               Noise
-highlight default link typstCodeBracket             Noise
-highlight default link typstCodeDollar              Noise
-" highlight default link typstHashtagControlFlowError Error
-highlight default link typstHashtagConditional      Conditional
-highlight default link typstHashtagRepeat           Repeat
-highlight default link typstHashtagKeyword          Keyword
-highlight default link typstHashtagConstant         Constant
-highlight default link typstHashtagStatementWord    Statement
-highlight default link typstHashtagIdentifier       Identifier
-highlight default link typstHashtagFieldAccess      Identifier
-highlight default link typstHashtagFunction         Function
-highlight default link typstHashtagParen            Noise
-highlight default link typstHashtagBrace            Noise
-highlight default link typstHashtagBracket          Noise
-highlight default link typstHashtagDollar           Noise
-highlight default link typstMarkupRawInline         Macro
-highlight default link typstMarkupRawBlock          Macro
-highlight default link typstMarkupLabel             Structure
-highlight default link typstMarkupReference         Structure
-highlight default link typstMarkupBulletList        Structure
-" highlight default link typstMarkupItalicError       Error
-" highlight default link typstMarkupBoldError         Error
-highlight default link typstMarkupEnumList          Structure
-highlight default link typstMarkupLinebreak         Structure
-highlight default link typstMarkupNonbreakingSpace  Structure
-highlight default link typstMarkupShy               Structure
-highlight default link typstMarkupDash              Structure
-highlight default link typstMarkupEllipsis          Structure
-highlight default link typstMarkupTermList          Structure
-highlight default link typstMarkupDollar            Noise
-
-" Highlighting > Custom Styling {{{2
-highlight! Conceal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
-
-highlight default typstMarkupHeading                    term=underline,bold     cterm=underline,bold    gui=underline,bold
-highlight default typstMarkupUrl                        term=underline          cterm=underline         gui=underline
-highlight default typstMarkupBoldRegion                 term=bold               cterm=bold              gui=bold
-highlight default typstMarkupItalicRegion               term=italic             cterm=italic            gui=italic
-
-highlight default link typstMarkupBoldDelimiter         typstMarkupBold
-highlight default link typstMarkupItalicDelimiter       typstMarkupItalic
-
-" }}}1
+" " Math > Linked groups {{{2
+" highlight default link typstMathFunction            Statement
+" highlight default link typstMathNumber              Number
+" highlight default link typstMathSymbol              Statement
+"
+" " Highlighting {{{1
+"
+" " Highlighting > Linked groups {{{2
+" highlight default link typstCommentBlock            Comment
+" highlight default link typstCommentLine             Comment
+" highlight default link typstCommentTodo             Todo
+" highlight default link typstCodeConditional         Conditional
+" highlight default link typstCodeRepeat              Repeat
+" highlight default link typstCodeKeyword             Keyword
+" highlight default link typstCodeConstant            Constant
+" highlight default link typstCodeNumberInteger       Number
+" highlight default link typstCodeNumberFloat         Number
+" highlight default link typstCodeNumberLength        Number
+" highlight default link typstCodeNumberAngle         Number
+" highlight default link typstCodeNumberRatio         Number
+" highlight default link typstCodeNumberFraction      Number
+" highlight default link typstCodeString              String
+" highlight default link typstCodeStatementWord       Statement
+" highlight default link typstCodeIdentifier          Identifier
+" highlight default link typstCodeFieldAccess         Identifier
+" highlight default link typstCodeFunction            Function
+" highlight default link typstCodeParen               Noise
+" highlight default link typstCodeBrace               Noise
+" highlight default link typstCodeBracket             Noise
+" highlight default link typstCodeDollar              Noise
+" " highlight default link typstHashtagControlFlowError Error
+" highlight default link typstHashtagConditional      Conditional
+" highlight default link typstHashtagRepeat           Repeat
+" highlight default link typstHashtagKeyword          Keyword
+" highlight default link typstHashtagConstant         Constant
+" highlight default link typstHashtagStatementWord    Statement
+" highlight default link typstHashtagIdentifier       Identifier
+" highlight default link typstHashtagFieldAccess      Identifier
+" highlight default link typstHashtagFunction         Function
+" highlight default link typstHashtagParen            Noise
+" highlight default link typstHashtagBrace            Noise
+" highlight default link typstHashtagBracket          Noise
+" highlight default link typstHashtagDollar           Noise
+" highlight default link typstMarkupRawInline         Macro
+" highlight default link typstMarkupRawBlock          Macro
+" highlight default link typstMarkupLabel             Structure
+" highlight default link typstMarkupReference         Structure
+" highlight default link typstMarkupBulletList        Structure
+" " highlight default link typstMarkupItalicError       Error
+" " highlight default link typstMarkupBoldError         Error
+" highlight default link typstMarkupEnumList          Structure
+" highlight default link typstMarkupLinebreak         Structure
+" highlight default link typstMarkupNonbreakingSpace  Structure
+" highlight default link typstMarkupShy               Structure
+" highlight default link typstMarkupDash              Structure
+" highlight default link typstMarkupEllipsis          Structure
+" highlight default link typstMarkupTermList          Structure
+" highlight default link typstMarkupDollar            Noise
+"
+" " Highlighting > Custom Styling {{{2
+" highlight! Conceal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
+"
+" highlight default typstMarkupHeading                    term=underline,bold     cterm=underline,bold    gui=underline,bold
+" highlight default typstMarkupUrl                        term=underline          cterm=underline         gui=underline
+" highlight default typstMarkupBoldRegion                 term=bold               cterm=bold              gui=bold
+" highlight default typstMarkupItalicRegion               term=italic             cterm=italic            gui=italic
+"
+" highlight default link typstMarkupBoldDelimiter         typstMarkupBold
+" highlight default link typstMarkupItalicDelimiter       typstMarkupItalic
+"
+" " }}}1
 
 let b:current_syntax = "typst"
 
